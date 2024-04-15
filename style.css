@@ -239,22 +239,21 @@ section.academic{
     margin: 0;
     padding: 0;
     text-align: center;
-    align-items: center;
+    
 }
 .academic__courses__list li{
     padding: 0;
     margin: 32px 0;
-    align-items: center;
+    
 }
 .academic__courses__list img{
     background-color: #eaf2fd;
-    align-items: center;
+    
 }
 .academic__courses__item__title{
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
-    align-items: center;
 }
 
 .academic__courses__item__subtitle{
@@ -329,14 +328,62 @@ section.experience{
 /*Contato*/
 
 section.formcontato{
-
+    background-color: #d4e4fa;
+}
+.formcontato__contato{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 150px;
+}
+.formcontato--esquerda{
+    display: block;
+}
+.formcontato__text{
+    margin-left: 16px;
+}
+.formcontato__title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 0;
+}
+.formcontato__subtext{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 0;
+}
+.formcontato__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 458px;
+}
+.formcontato__botao{
+    width: 165px;
+    height: 51px;
+    padding: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+.formcontato__botao:hover{
+    cursor: pointer;
+    background-color: blue;
 }
 
 /*footeer*/
 
 section.footer{
-   
+   background-color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 16px;
 }
+
 
 /* Chegou a hora de se desafiar com a responsividade, 
 utilize como referência os breakpoints @media abaixo*/
