@@ -246,6 +246,10 @@ section.academic{
     margin: 32px 0;
     
 }
+.academic__courses__box img{
+    width: 100px;
+    height: 100px;
+}
 .academic__courses__list img{
     background-color: #eaf2fd;
     
@@ -329,11 +333,13 @@ section.experience{
 
 section.formcontato{
     background-color: #d4e4fa;
+    padding: 64px 150px;
 }
 .formcontato__contato{
     display: flex;
     justify-content: space-around;
-    padding: 50px 150px;
+
+
 }
 .formcontato--esquerda{
     display: block;
