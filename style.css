@@ -1,4 +1,9 @@
 /*CSS Reset / Normalize*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* incluir padding e border no cálculo do tamanho */
+}
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
@@ -11,11 +16,12 @@ coloque nas sessões indicadas*/
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: #f5f5f5;
     font-family: 'Raleway';
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     line-height: 1;
+
 }
 ol, ul,li {
     list-style: none;
@@ -49,7 +55,7 @@ https://en.bem.info/methodology/quick-start/*/
     display: flex;
     align-items: center;
     gap: 15px;
-    width: Fixed (1,136px)px;
+    width: Fixed (1.136px)px;
     height: Hug (88px)px;
     padding: 32px 0px 32px 0px;
     justify-content: space-between;
@@ -76,7 +82,7 @@ section.menu{
     align-items: center;
 }
 
-/*Sessão Title*/
+/* SEÇÃO TITULO */
 
 section.title{
     margin: 32px 0;
@@ -84,7 +90,7 @@ section.title{
 .title__div{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    align-content: space-between;
     align-items: stretch;
     margin: 0 150px;
 }
@@ -95,33 +101,41 @@ section.title{
     flex-grow: 1;
 }
 .title__container{
-    width: 800px;
-
+    width: 800px;  
 }
+
 .title__bio{
     font-weight: 700;
     font-size: 52px;
-    line-height: 61.05px;
+    line-height: 61px;
     margin: 0;
 }
-.title__subscretion{
+.title__subsection{
+ 
+    margin-top: 30px;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
 }
 .title__network{
+
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
     width: 450px;
     padding: 0;
     font-weight: 500;
+    
 }
 
-/*Sessão About*/
+/* SEÇÃO ABOUT */
 
 section.about{
     background-color: #eaf2fd;
     padding: 64px 150px;
+}
+.about__container{
+    width: 800px;
 }
 .about__title{
     font-weight: 700;
@@ -131,7 +145,6 @@ section.about{
 .about__paragraph{
     font-weight: 400;
     line-height: 19px;
-    text-align: justify;
 }
 
 
@@ -139,8 +152,9 @@ section.about{
 section.skills{
     padding: 0 150px;
 }
-.skill__title{
+.skills__title{
     text-align: center;
+    margin-top: 30px;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
@@ -171,7 +185,7 @@ section.skills{
     margin-bottom: 8px;
 }
 
-/*Sessão Hobbies*/
+/* HOBBIES */
 
 section.hobbies{
     padding: 0 150px;
@@ -209,31 +223,30 @@ section.hobbies{
 }
 
 
-/* Experiência Acadêmica*/
+/* FORMACAO ACADEMICA */
 
 section.academic{
-    padding: 64px 0;
+    padding: 30px;
     background-color: #eaf2fd;
-    margin-left: auto;
     
 }
 .academic__title{
+   
+    margin-block: 10px;
     text-align: center;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
+    
 }
 .academic__courses{
     display: flex;
     justify-content: center;
-    flex-direction: row;
     margin: 0 150px;
-    align-items: center;
 }
 .academic__courses__box{
-    width: 26,5rem;
+    width: 16.9rem;
     margin: 0 1rem;
-
 }
 .academic__courses__list{
     margin: 0;
@@ -243,37 +256,57 @@ section.academic{
 }
 .academic__courses__list li{
     padding: 0;
-    margin: 32px 0;
-    
+    margin: 10px;   
 }
-.academic__courses__box img{
-    width: 100px;
-    height: 100px;
-}
-.academic__courses__list img{
-    background-color: #eaf2fd;
-    
+.acadeic__courses__item__img{
+    background-color: white;
 }
 .academic__courses__item__title{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 268px;
+    height: 19px;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 14px;
     line-height: 26px;
-}
 
+}
+.academic__courses__box img{
+    width: 250px;
+    height: 250px;
+    gap: 5px;
+    padding: 6px;
+}
+.academic__courses__list img{
+    background-color: white;
+    
+}
 .academic__courses__item__subtitle{
-    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Raleway';
     font-size: 16px;
-    line-height: 19px;
+    font-weight: 500;
+    line-height: 18.78px;
+    text-align: left;
+    width: 238px;
+    height: 18.78px;
+    gap: 0px;
+
 }
 
-/* experiência*/
+/* EXPERIENCIA */
 
 section.experience{
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    margin: 16px 150px 30px 150px;
+    justify-content: center;
+    margin: 0px 150px px 150px;
 }
 .experience__section__title{
+    margin-block: 10px;
     text-align: center;
     font-weight: 700;
     font-size: 32px;
@@ -282,7 +315,7 @@ section.experience{
 .experience__box{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 25px 0;
 }
@@ -327,45 +360,64 @@ section.experience{
 }
 .experience__botao--demo:hover{
     cursor: pointer;
-    background-color: blue;
+    background-color: #d4e4fa;
 }
-/*Contato*/
+/* CONTATO */
 
 section.formcontato{
     background-color: #d4e4fa;
-    padding: 64px 150px;
+    margin-left: auto;
+    padding: 64px;
 }
-.formcontato__contato{
+
+.formcontato__contato {
     display: flex;
-    justify-content: space-around;
-
-
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
 }
-.formcontato--esquerda{
+
+.formcontato--esquerda {
     display: block;
 }
-.formcontato__text{
+
+.formcontato__text {
     margin-left: 16px;
+    align-content: space-around;
+
 }
-.formcontato__title{
+
+.formcontato__title {
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
     margin-top: 0;
 }
-.formcontato__subtext{
+
+.formcontato__subtext {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     margin-top: 0;
 }
-.formcontato__form{
+
+.formcontato__form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     height: 458px;
 }
+
+.formcontato__input {
+    height: 25px;
+}
+
+.formcontato__textarea {
+    height: 133px;
+    resize: none;
+}
+
 .formcontato__botao{
     width: 165px;
     height: 51px;
@@ -379,16 +431,15 @@ section.formcontato{
     background-color: blue;
 }
 
-/*footeer*/
+/* RODAPE */
 
 section.footer{
-   background-color: white;
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    padding: 16px;
-}
+} */
 
 
 /* Chegou a hora de se desafiar com a responsividade, 
