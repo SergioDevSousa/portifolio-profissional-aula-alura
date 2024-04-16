@@ -21,6 +21,7 @@ body {
     margin: 0px;
     padding: 0px;
     line-height: 1;
+    color: #464646;
 
 }
 ol, ul,li {
@@ -28,7 +29,7 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: #000;
 }
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -45,48 +46,41 @@ Link da documentação oficial!
 https://en.bem.info/methodology/quick-start/*/
 
 /* SEÇÃO MENU */
-.menu{
-    display: flex;
-    flex-direction: center;
-    margin-left: 30px;
-    gap: 8px;
-}
-.menu header{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    width: Fixed (1.136px)px;
-    height: Hug (88px)px;
-    padding: 32px 0px 32px 0px;
-    justify-content: space-between;
-    opacity: 0px;
-
-}
-.menu__list{
-    display: flex;
-    list-style-type: none;
-    margin-left: auto;
-    align-items: center;
-    gap: 32px;
-}
-.menu__list nav{
-    flex-direction: row;
-}
 section.menu{
     display: flex;
     justify-content: space-between;
-    width: 1136px;
-    margin: 0 auto;
-    height: 88px;
-    padding: 32px 0px 32px 0px;
     align-items: center;
+    margin: 0 150px;
+}
+section header{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+section header img{
+    margin-right: 16px;
 }
 
-/* SEÇÃO TITULO */
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+    padding: 0;
+    font-weight: 500;
+}
+.menu__list__item:last-child{
+    font-weight: 700;
+}
+.menu__list__item__conatato{
+    display: none;
+}
 
+/* TITLE */
 section.title{
     margin: 32px 0;
 }
+
 .title__div{
     display: flex;
     flex-direction: row-reverse;
@@ -111,28 +105,23 @@ section.title{
     margin: 0;
 }
 .title__subsection{
- 
-    margin-top: 30px;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
 }
 .title__network{
-
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
     width: 450px;
     padding: 0;
     font-weight: 500;
-    
 }
 
 /* SEÇÃO ABOUT */
 
 section.about{
     background-color: #eaf2fd;
-    padding: 64px 150px;
+    padding: 62px 150px;
 }
 .about__container{
     width: 800px;
@@ -147,14 +136,12 @@ section.about{
     line-height: 19px;
 }
 
-
 /* SEÇÃO SKILLS */
 section.skills{
     padding: 0 150px;
 }
 .skills__title{
     text-align: center;
-    margin-top: 30px;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
@@ -169,10 +156,10 @@ section.skills{
     flex-direction: column;
     justify-content: flex-end;
     padding: 16px;
-    margin: 20px;
+    margin: 20px 0;
     width: 100px;
     height: 110px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 20px;
     font-weight: 700;
 
@@ -209,7 +196,7 @@ section.hobbies{
     margin: 20px;
     width: 100px;
     height: 110px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 20px;
     font-weight: 700;
 
@@ -226,13 +213,11 @@ section.hobbies{
 /* FORMACAO ACADEMICA */
 
 section.academic{
-    padding: 30px;
+    padding: 64px 0;
     background-color: #eaf2fd;
     
 }
 .academic__title{
-   
-    margin-block: 10px;
     text-align: center;
     font-weight: 700;
     font-size: 32px;
@@ -244,6 +229,7 @@ section.academic{
     justify-content: center;
     margin: 0 150px;
 }
+/* NECESSÁRIO 4 FORMAÇÃO */
 .academic__courses__box{
     width: 16.9rem;
     margin: 0 1rem;
@@ -299,14 +285,11 @@ section.academic{
 /* EXPERIENCIA */
 
 section.experience{
-    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0px 150px px 150px;
 }
 .experience__section__title{
-    margin-block: 10px;
     text-align: center;
     font-weight: 700;
     font-size: 32px;
@@ -342,9 +325,9 @@ section.experience{
     width: 105px;
     height: 51px;
     margin-right: 16px;
-    background-color: #eaf2fd;
-    color: blue;
-    border: 1px solid rgba(0,0,255);
+    background-color: #f5f5f5;
+    color: #2a7ae4;
+    border: 1px solid #2a7ae4;
 }
 .experience__botao--repo:hover{
     cursor: pointer;
@@ -354,27 +337,24 @@ section.experience{
     width: 105px;
     height: 51px;
     padding: 16px;
-    background-color: blue;
-    color: rgb(251, 251, 253);
+    background-color: #2a7ae4;
+    color: #ffffff;
     border: none;
 }
 .experience__botao--demo:hover{
     cursor: pointer;
-    background-color: #d4e4fa;
+    background-color: #5595e9;
 }
 /* CONTATO */
 
 section.formcontato{
-    background-color: #d4e4fa;
-    margin-left: auto;
-    padding: 64px;
+    background-color: #eaf2fd;
 }
 
 .formcontato__contato {
     display: flex;
     justify-content: space-between;
-    margin-left: 200px;
-    margin-right: 200px;
+    padding: 50px 150px;
 }
 
 .formcontato--esquerda {
@@ -383,7 +363,6 @@ section.formcontato{
 
 .formcontato__text {
     margin-left: 16px;
-    align-content: space-around;
 
 }
 
@@ -422,65 +401,22 @@ section.formcontato{
     width: 165px;
     height: 51px;
     padding: 16px;
-    background-color: blue;
-    color: white;
+    background-color: #2a7ae4;
+    color: #ffffff;
     border: none;
 }
 .formcontato__botao:hover{
     cursor: pointer;
-    background-color: blue;
+    background-color: #5595e9;
 }
 
 /* RODAPE */
 
 section.footer{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   padding: 16px;
-} */
-
-
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menu */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Experiências acadêmicas*/
-
-/*Expeirência profissional*/
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-/*Menu*/
-
-/*Titulo*/
-
-/*Sessão sobre*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
-
-/*Experiência Profissional*/
-
- /*Contato*/
-
-/*Footer*/
-
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
 }
