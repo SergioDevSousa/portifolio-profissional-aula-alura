@@ -1,27 +1,30 @@
-/*CSS Reset / Normalize*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* incluir padding e border no cálculo do tamanho */
-}
+
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
+/*Insira a variavel das outras cores inspecionando o modelo do figma*/
+/*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+
 :root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
+    --cor-de-texto-geral: #464646;
+    --cor-de-fundo-destaque: #EAF2FD;
+    --cor-branco: #FFFFFF;
+    --cor-azul-100: #2A7AE4;
+    --cor-azul-80-hover: #5595E9;
+    --cor-botao-bg-hover: #D4E4FA;
 }
+
 
 body {
     box-sizing: border-box;
-    background-color: #f5f5f5;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0px;
     padding: 0px;
     line-height: 1;
-    color: #464646;
+    color: var(--cor-de-texto-geral);
 
 }
 ol, ul,li {
@@ -29,8 +32,9 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color: #000;
+    color: var(--cor-de-link) #000;
 }
+
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
 de utiliza-la. 
@@ -120,7 +124,7 @@ section.title{
 /* SEÇÃO ABOUT */
 
 section.about{
-    background-color: #eaf2fd;
+    background-color: var(--cor-de-fundo-destaque);
     padding: 62px 150px;
 }
 .about__container{
@@ -159,7 +163,7 @@ section.skills{
     margin: 20px 0;
     width: 100px;
     height: 110px;
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
     border-radius: 20px;
     font-weight: 700;
 
@@ -196,7 +200,7 @@ section.hobbies{
     margin: 20px;
     width: 100px;
     height: 110px;
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
     border-radius: 20px;
     font-weight: 700;
 
@@ -214,9 +218,10 @@ section.hobbies{
 
 section.academic{
     padding: 64px 0;
-    background-color: #eaf2fd;
+    background-color: var(--cor-de-fundo-destaque);
     
 }
+/* CORRIGIDO */
 .academic__title{
     text-align: center;
     font-weight: 700;
@@ -224,63 +229,57 @@ section.academic{
     line-height: 38px;
     
 }
+
 .academic__courses{
     display: flex;
-    justify-content: center;
-    margin: 0 150px;
+    justify-content: space-around;
+    background-color: var(--cor-de-fundo-destaque);
 }
-/* NECESSÁRIO 4 FORMAÇÃO */
+/* AVALIAR */
 .academic__courses__box{
-    width: 16.9rem;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    width: 26.5rem;
     margin: 0 1rem;
 }
-.academic__courses__list{
-    margin: 0;
+.academic__courses__list {
     padding: 0;
     text-align: center;
+    margin: 16px;
+    /* line-height: 2px; */
     
 }
 .academic__courses__list li{
     padding: 0;
-    margin: 10px;   
+    margin: 32px 32px;  
+    line-height: 50%;
+    font-size:medium; 
 }
-.acadeic__courses__item__img{
-    background-color: white;
-}
-.academic__courses__item__title{
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    width: 268px;
-    height: 19px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
 
+.academic__courses__item__img{
+    background-color: var(--cor-branco);
 }
-.academic__courses__box img{
-    width: 250px;
-    height: 250px;
-    gap: 5px;
-    padding: 6px;
-}
-.academic__courses__list img{
-    background-color: white;
-    
+
+.academic__courses__item__title{
+    font-weight: 700;
+    font-size: 22px;
+    /* line-height: 26px; */
+
 }
 .academic__courses__item__subtitle{
-    display: flex;
-    justify-content: flex-start;
-    font-family: 'Raleway';
     font-size: 16px;
     font-weight: 500;
-    line-height: 18.78px;
-    text-align: left;
-    width: 238px;
-    height: 18.78px;
-    gap: 0px;
-
+    /* line-height: 19px; */
 }
+.academic__courses__box img{
+    background-color: var(--cor-branco);
+    width: 192px;
+    height: 130px;
+    gap: 10px;
+    padding: 16px;
+}
+
 
 /* EXPERIENCIA */
 
@@ -298,9 +297,15 @@ section.experience{
 .experience__box{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 25px 0;
+}
+.experience__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 .experience__box:nth-child(odd){
     flex-direction: row-reverse;
@@ -313,8 +318,9 @@ section.experience{
 
 .experience__title{
     font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 16px;
+    margin: 16px 0px 0px;
+    /* line-height: 26px; */
 }
 .experience__text{
     font-weight: 500;
@@ -324,37 +330,41 @@ section.experience{
 .experience__botao--repo{
     width: 105px;
     height: 51px;
-    margin-right: 16px;
-    background-color: #f5f5f5;
-    color: #2a7ae4;
-    border: 1px solid #2a7ae4;
+    padding: 16px;
+    /* margin-right: 16px; */
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-azul-100);
+    border: 1px solid var(--cor-azul-100);
 }
 .experience__botao--repo:hover{
     cursor: pointer;
-    background-color: #d4e4fa;
+    background-color: var(--cor-botao-bg-hover);
 }
-.experience__botao--demo {
+.experience__botao--demo{
     width: 105px;
     height: 51px;
     padding: 16px;
-    background-color: #2a7ae4;
-    color: #ffffff;
+    background-color: var(--cor-azul-100);
+    color: var(--cor-branco);
     border: none;
 }
+
 .experience__botao--demo:hover{
     cursor: pointer;
-    background-color: #5595e9;
+    background-color: var(--cor-azul-80-hover);
 }
 /* CONTATO */
 
 section.formcontato{
-    background-color: #eaf2fd;
+    background-color: var(--cor-de-fundo-destaque);
 }
 
 .formcontato__contato {
     display: flex;
     justify-content: space-between;
-    padding: 50px 150px;
+    /* LEMBRAR */
+    width: 100vw;
+    height: 100vh;
 }
 
 .formcontato--esquerda {
@@ -401,22 +411,28 @@ section.formcontato{
     width: 165px;
     height: 51px;
     padding: 16px;
-    background-color: #2a7ae4;
-    color: #ffffff;
+    background-color: var(--cor-azul-100);
+    color: var(--cor-branco);
     border: none;
 }
 .formcontato__botao:hover{
     cursor: pointer;
-    background-color: #5595e9;
+    background-color: var(--cor-azul-80-hover);
 }
 
 /* RODAPE */
 
-section.footer{
-    background-color: #ffffff;
+.text-rodape{
+    margin-top: 20px;
+}
+/* section.footer{
+    background-color: var(--cor-de-fundo);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 16px;
 }
+.footer__rodape{
+    background-color: #2A7AE4;
+} */

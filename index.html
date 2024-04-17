@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Folha de estilo de CSS Linkado -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./responsividade.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsividade.css">
+    <link rel="stylesheet" href="./css/reset.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,14 +167,7 @@
     <section class="academic">
         <h2 class="academic__title" id="formacao">Formação acadêmica</h2>
         <div class="academic__courses">
-            <div class="academic__courses__box">
-                <ul class="academic__courses__list">
-                    <!-- Insira a logo de seu local de formação -->
-                    <li class="academic__courses__item__img"><img src="./assets/logo_faintvisa-removebg-preview.png"></li>
-                    <li class="academic__courses__item__title"><h4>Licenciatura em História</h4></li>
-                    <li class="academic__courses__item__subtitle"><p>2003 - FAINTVISA</p></li>
-                </ul>
-            </div>
+            
             <div class="academic__courses__box">
                 <ul class="academic__courses__list">
                     <!-- Insira a logo de seu local de formação -->
@@ -213,7 +207,7 @@
                     <div class="experience__description">
                         <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/SergioDevSousa/portfoliofrontend-main.git"><button class="experience__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/portfoliofrontend-main/"><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/portfoliofrontend-main/"><button class="experience__botao--demo">Ver Deploy</button></a></span>
                     </div>
             </div>
         </div>  
@@ -221,13 +215,13 @@
         <div class="experience__box">
             <!-- Insira a logo/captura de seu projeto/trabalho -->
             <img class="experience__img" src="./assets/projeto criptografia.png" width="50%" height="50%">
-            <div class="experience__info"
-                <h2 class="experience__title">Jogo criado com HTML, CSS e JavaScript</h2>
+            <div class="experience__info">
+                <h2 class="experience__title">Decodificador de textos (HTML, CSS e JS)</h2>
                 <h3 class="experience__text">Challenge Oracle </h3>
                     <div class="experience__description">
                         <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/SergioDevSousa/decodificador"><button class="experience__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/decodificador/"><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/decodificador/"><button class="experience__botao--demo">Ver Deploy</button></a></span>
                     </div>
             </div>
         </div>  
@@ -235,13 +229,13 @@
         <div class="experience__box">
             <!-- Insira a logo de seu projeto/trabalho -->
             <img class="experience__img" src="./assets/jogo secreto.png" width="50%" height="50%">
-            <div class="experience__info"
-                <h2 class="experience__title">Decodificador de texto</h2>
-                <h3 class="experience__text">Challenge Alura Codificador </h3>
+            <div class="experience__info">
+                <h2 class="experience__title">Jogo Número Secreto (HTML, CSS e JS)</h2>
+                <h3 class="experience__text">Projeto aula ALURA </h3>
                     <div class="experience__description">
                         <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/SergioDevSousa/JogoSecreto.git"><button class="experience__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/JogoSecreto/"><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/JogoSecreto/"><button class="experience__botao--demo">Ver Deploy</button></a></span>
                     </div>
             </div>
         </div>  
@@ -249,13 +243,13 @@
         <div class="experience__box">
             <!-- Insira a logo de seu projeto/trabalho -->
             <img class="experience__img" src="./assets/portifolio sergio alura.png" width="50%" height="50%">
-            <div class="experience__info"
-            <h2 class="experience__title">Jogo criado com HTML, CSS e JavaScript</h2>
-                <h3 class="experience__text">Challenge Oracle </h3>
+            <div class="experience__info">
+            <h2 class="experience__title">Portifólio usando HTML, CSS e JS</h2>
+                <h3 class="experience__text">Projeto Aula ALURA </h3>
                     <div class="experience__description">
                         <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/SergioDevSousa/meuportfolio.git"><button class="experience__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/meuportfolio/"><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__demo"><a href="https://sergiodevsousa.github.io/meuportfolio/"><button class="experience__botao--demo">Ver Deploy</button></a></span>
                     </div>
         </div>
         </div>  
@@ -282,14 +276,16 @@
         </section>
 
         <!-- Sessão de Footer/Rodapé-->
-        <section class="footer">
+        <footer>
+            <p class="text-rodape">©️ Desenvolvido por Sérgio Sousa - Todos os direitos reservados. 2024</p>
+        </footer>
+        <!-- <section class="footer">
             <div class="footer__rodape">
-                <p>©️ Desenvolvido por Sérgio sousa - Todos os direitos reservados. 2024</p>
             </div>
-        </section>
+        </section> -->
     </div>
     <!-- Script Linkado do seu documento de JavaScript -->
-<script src="validate.js"></script>
+<script src="./js/validate.js"></script>
 </body>
 </html>
 
