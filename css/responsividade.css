@@ -1,24 +1,4 @@
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
-
-/* DESKTOP */
-
-/* @media only screen and (min-width: 1025px) {
-
-  
-} */
-
-
-/* TABELTS */
-
-/* Estilos para telas médias (como tablets) */
-/* @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  
-} */
-
-/* MOBILE */
-
-/* Mobile */
+/* Mobile
 @media screen and (min-width: 375px) {
     
     /* Menu */
@@ -137,22 +117,24 @@ utilize como referência os breakpoints @media abaixo*/
          
     /* Formação Acadêmica */
         section.academic {
-            padding: 16px;
+            padding: 0px;
         }
         
         .academic__title {
-            margin: 16px;
-    
+            margin-top: 16px;
             font-size: 22px;
-            line-height: 26px;
+            line-height: 10dvh;
         }
         
         .academic__courses {
             flex-wrap: wrap;
+            margin: 0dvw;
+            border: 0dvh;
         }
     
         .academic__courses__box {
-            margin: 16px;
+            border-top: 10px;
+
         }
     
         .academic__courses__item__img {
@@ -160,21 +142,20 @@ utilize como referência os breakpoints @media abaixo*/
             height: 130px;
         }
     
-        .academic__courses__list li {
-            margin: 0;
-            line-height: 20px;
-        
+        .academic__courses__list li{
+            align-content: center;
+            margin: 2px;
+            padding: 0px;
         }
     
         .academic__courses__item__title {
-    
-            font-size: 16px;
-            line-height: 19px;
+            font-size: 2dvw;
+            line-height: 3dvh;
         }
     
         .academic__courses__item__subtitle {
-            font-size: 14px;
-            line-height: 16px;
+            font-size: 2dvw;
+            line-height: 3dvh;
         }
         
     /* Experiência Profissional */
@@ -229,8 +210,19 @@ utilize como referência os breakpoints @media abaixo*/
         }
         
     /* Contato*/
+        section.formcontato{
+        background-color: var(--cor-de-fundo-destaque);
+        }
+        .formcontato__contato{
+            display: flex;
+            width: 90vw;
+            height: 70vh;
+        }
+        .formulario-google{
+            align-content: center;
+        }
         .formcontato__contato {
-            padding: 16px;
+            padding: 10px;
         }
         
         .formcontato--esquerda {
@@ -238,22 +230,20 @@ utilize como referência os breakpoints @media abaixo*/
         }
         
         .formcontato__text {
-            margin: 0;
+            margin: 10px;
         }
     
         .formcontato__form {
-            height: 350px;
+            height: 0px;
         }
     
-        .formcontato__botao {
-            width: 151px;
-            height: 40px;
-    
-            padding: 12px 16px;
-        }
         
-       
+        
+    /* Footer */
+        .text-rodape{
+             margin-top: 20px;
     }
+
     
     
     /* Tablet */
@@ -272,6 +262,7 @@ utilize como referência os breakpoints @media abaixo*/
         
         .menu__list__item__contato {
             display: block;
+        
             font-weight: 700;
             font-size: 16px;
             line-height: 19px;
@@ -376,6 +367,7 @@ utilize como referência os breakpoints @media abaixo*/
         
         .experiencie__box {
             flex-direction: column;
+        
             width: 704px;
         }
         
@@ -448,6 +440,7 @@ utilize como referência os breakpoints @media abaixo*/
             display: flex;
             justify-content: space-between;
             align-items: center;
+    
             margin: 0 150px;
         }
     
@@ -660,21 +653,17 @@ utilize como referência os breakpoints @media abaixo*/
         .academic__courses__list {
             margin: 0;
             padding: 0;
+    
             text-align: center;
-            font-size: small;
-            line-height: 50%;
         }
     
         .academic__courses__list li {
             padding: 0;
             margin: 32px 0;
-            line-height: 2px;
-            
-            }
         }
     
         .academic__courses__item__img {
-            background-color: var(--cor-branco);
+            /* background-color: var(--cor-branco); */
             width: 368px;
             height: 130px;
         }
@@ -842,3 +831,4 @@ utilize como referência os breakpoints @media abaixo*/
             align-items: center;
             padding: 16px;
         }
+    }

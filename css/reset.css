@@ -1,6 +1,26 @@
-/*CSS Reset / Normalize*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* incluir padding e border no cálculo do tamanho */
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+    font-family: 'Raleway';
+    margin: 0px;
+    padding: 0px;
+    line-height: 1;
+    color: var(--cor-de-texto-geral);
+    text-align: justify;
+    height: 100%;
+
+}
+ol, ul,li {
+    margin: 10px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link) #000;
+    width:100%;
+    float:left;
+}
+
+img{
+    box-shadow: 10px 5px 5px #464646;
 }
