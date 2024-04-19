@@ -2,15 +2,15 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- Folha de estilo de CSS Linkado -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsividade.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/variavel.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
 
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -45,7 +45,7 @@
             <img class="title__profile" src="assets\profile.png" alt="logo">
             <div class="title__container" id="#sobremim">
                 <h2 class="title__bio">Olá, meu nome é Sérgio Sousa e sou Desenvolvedor Júnior.</h2>
-                <h3 class="title__subsection">Atualmente estou cursando o Tecnólogo em Desenvolvimento de Sistemas EAD pela UNIFATECIE e Iniciando minha formação Front-End junto a ALURA.</h3>
+                <h3 class="title__subsection">Atualmente estou cursando o Tecnólogo em Desenvolvimento de Sistemas EAD pela UNIFATECIE e Iniciando minha formação Front-End JUNIOR junto a ALURA.</h3>
                 <ul class="title__network">
                     <!-- Ponha os links de suas redes sociais favoritas -->
                     <li class="title__network__item"><a href="https://github.com/SergioDevSousa" target="_blank">Github <img src="assets\arrow.png" alt="logo"> </a></li>
@@ -246,44 +246,40 @@
                             <span class="experience__demo"><a href="https://sergiodevsousa.github.io/meuportfolio/" target="_blank"><button class="experience__botao--demo">Ver Deploy</button></a></span>
                     </div>
             </div>
-        </div>  
+        </div>
+    </section>
 
         <!-- Sessão de Contato -->
         <section class="formcontato">
             <div id="contato" class="formcontato__contato">
-                <div class="formcontato--esquerda">
-                    <img class="formcontato__img" src="./assets/dev contato.png" alt="avatar">
-                </div>
-                <div class="container">
-                    <h2>Formulário de Mensagem</h2>
-                    <form action="mailto:oxenttesergio@gmail.com" method="post">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required>
-                
+                <div class="formcontato__text">
+                    <h2 class="formcontato__title">Contato</h2>
+                    <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
+                    <h3 class="formcontato__subtext">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
+                    <form class="formcontato__form" action="mailto:oxenttesergio@gmail.com" method="post">
+                        <label for="nome">Nome:</label>
+                        <input class="formcontato__input" type="text" id="nome" autocomplete="name" required>                    
                         <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" required>
-                
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" required></textarea>
-                
-                        <input type="submit" onclick="location.href='mailto:oxenttesergio@gmail.com';" value="Enviar">
+                        <input class="formcontato__input" type="email" id="email" autocomplete="email" required>
+                        <label for="assunto">Assunto:</label>
+                        <input class="formcontato__input" type="text" id="assunto" autocomplete="assunto" required>
+                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem" autocomplete="message" required></textarea>
+                        <input class="btn-enviar" type="submit" onclick="enviarEmail()" value="Enviar"></button>
                     </form>
                 </div>
             </div>
         </section>
 
         <!-- Sessão de Footer/Rodapé-->
-        <footer>
-            <p class="text-rodape">©️ Desenvolvido por Sérgio Sousa - Todos os direitos reservados. 2024</p>
-        </footer>
-        <!-- <section class="footer">
+        <section class="footer">
             <div class="footer__rodape">
+                <p>Desenvolvido por Sérgio Sousa ©️ Todos os direitos reservados - 2024</p>
             </div>
-        </section> -->
+        </section>
+        
     </div>
     <!-- Script Linkado do seu documento de JavaScript -->
 <script src="./js/scrypt.js"></script>
-<script src="./js/SubmitEvent.js"></script>
 </body>
 </html>
 

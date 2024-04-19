@@ -3,23 +3,22 @@ document.getElementById("contato").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita que o formulário seja submetido normalmente
 
     
-    // var nome = document.getElementById("nome").value;
-    // var email = document.getElementById("email").value;
-    // var assunto = document.getElementById("assunto").value;
-    // var mensagem = document.getElementById("mensagem").value;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
 
-    var errorMessages = []
+    const errorMessages = []
 
     
-    if (nome === "") {
+    if (nome.trim() === " ") {
         errorMessages.push('Preencha o campo nome!');
     }
-    if (email === "") {
+    if (email.trim() === " ") {
         errorMessages.push('Email de preenchimento obrigatório!');
     } else if (!isValidEmail(email)) {
         errorMessages.push('Por favor, insira um e-mail válido!');
     }
-    if (mensagem === "") {
+    if (mensagem.trim() === " ") {
         errorMessages.push('Escreva sua mensagem!');
     }
 
@@ -32,21 +31,17 @@ document.getElementById("contato").addEventListener("submit", function(event) {
     
 });
 function isValidEmail(email) {
-  
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
-// const spriteWidth = 256; // Largura de cada quadro da animação
-// const frames = 6; // Número total de quadros na imagem sprite
-// let currentFrame = 0; // Quadro atual
+function enviarEmail() {
+    var nome = encodeURIComponent(document.getElementById('nome').value);
+    var email = encodeURIComponent(document.getElementById('email').value);
+    var mensagem = encodeURIComponent(document.getElementById('mensagem').value);
+    
+    var mailtoLink = 'mailto:oxenttesergio@gmail.com' +
+                     '?subject=' + encodeURIComponent('Assunto do Email') +
+                     '&body=' + 'nome=' + nome + '&email=' + email + '&mensagem=' + mensagem;
 
-// function animateSprite() {
-//     const imageElement = document.getElementById("image");
-//     const offset = -currentFrame * spriteWidth;
-//     imageElement.style.backgroundPosition = `${offset}px 0px`;
-
-//     currentFrame = (currentFrame + 1) % frames;
-//     requestAnimationFrame(animateSprite);
-// }
-
-// animateSprite();
+    window.location.href = mailtoLink;
+}

@@ -1,3 +1,6 @@
+*{
+    border: 0;
+}
 body{
     box-sizing: border-box;
     background-color: var(--cor-de-fundo);
@@ -16,11 +19,11 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color: var(--cor-de-link) #000;
+    color: var(--cor-de-link);
     width:100%;
     float:left;
 }
-
+/* SOMBRA */
 img{
     box-shadow: 10px 5px 5px #464646;
 }

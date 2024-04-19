@@ -1,4 +1,4 @@
-/* Mobile
+/* Mobile */
 @media screen and (min-width: 375px) {
     
     /* Menu */
@@ -117,24 +117,22 @@
          
     /* Formação Acadêmica */
         section.academic {
-            padding: 0px;
+            padding: 16px;
         }
         
         .academic__title {
-            margin-top: 16px;
+            margin: 16px;
+    
             font-size: 22px;
-            line-height: 10dvh;
+            line-height: 26px;
         }
         
         .academic__courses {
             flex-wrap: wrap;
-            margin: 0dvw;
-            border: 0dvh;
         }
     
         .academic__courses__box {
-            border-top: 10px;
-
+            margin: 16px;
         }
     
         .academic__courses__item__img {
@@ -142,20 +140,19 @@
             height: 130px;
         }
     
-        .academic__courses__list li{
-            align-content: center;
-            margin: 2px;
-            padding: 0px;
+        .academic__courses__list li {
+            margin: 0;
         }
     
         .academic__courses__item__title {
-            font-size: 2dvw;
-            line-height: 3dvh;
+    
+            font-size: 16px;
+            line-height: 19px;
         }
     
         .academic__courses__item__subtitle {
-            font-size: 2dvw;
-            line-height: 3dvh;
+            font-size: 14px;
+            line-height: 16px;
         }
         
     /* Experiência Profissional */
@@ -208,42 +205,8 @@
     
             padding: 12px 16px;
         }
-        
-    /* Contato*/
-        section.formcontato{
-        background-color: var(--cor-de-fundo-destaque);
-        }
-        .formcontato__contato{
-            display: flex;
-            width: 90vw;
-            height: 70vh;
-        }
-        .formulario-google{
-            align-content: center;
-        }
-        .formcontato__contato {
-            padding: 10px;
-        }
-        
-        .formcontato--esquerda {
-            display: none;
-        }
-        
-        .formcontato__text {
-            margin: 10px;
-        }
-    
-        .formcontato__form {
-            height: 0px;
-        }
-    
-        
-        
-    /* Footer */
-        .text-rodape{
-             margin-top: 20px;
+         
     }
-
     
     
     /* Tablet */
@@ -406,28 +369,6 @@
             height: 40px;
         
             padding: 12px 16px;
-        }
-        
-    /* Contato */
-        .formcontato__contato {
-            padding: 50px 80px;
-        
-            justify-content: center;
-        }
-        
-        .formcontato--esquerda {
-            display: none;
-        }
-        
-        .formcontato__form {
-            justify-content: space-evenly;
-        }
-        
-        .formcontato__botao {
-            padding: 12px 16px;
-        
-            width: 151px;
-            height: 40px;
         }
         
     }
@@ -663,7 +604,7 @@
         }
     
         .academic__courses__item__img {
-            /* background-color: var(--cor-branco); */
+            background-color: var(--cor-branco);
             width: 368px;
             height: 130px;
         }
@@ -753,71 +694,6 @@
         }
     
         .experiencia__botao--demo:hover {
-            cursor: pointer;
-    
-            background-color: var(--cor-azul-80-hover);
-        }
-    
-    /* Contato */
-        section.formcontato{
-            background-color: var(--cor-de-fundo-destaque);
-        }
-    
-        .formcontato__contato {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 150px;
-        }
-    
-        .formcontato--esquerda {
-            display: block;
-        }
-    
-        .formcontato__text {
-            margin-left: 16px;
-        }
-    
-        .formcontato__title {
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 38px;
-            margin-top: 0;
-        }
-    
-        .formcontato__subtext {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-            margin-top: 0;
-        }
-    
-        .formcontato__form {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: stretch;
-            height: 458px;
-        }
-    
-        .formcontato__input {
-            height: 25px;
-        }
-    
-        .formcontato__textarea {
-            height: 133px;
-            resize: none;
-        }
-    
-        .formcontato__botao {
-            width: 165px;
-            height: 51px;
-            padding: 16px;
-            background-color: var(--cor-azul-100);
-            color: var(--cor-branco);
-            border: none;
-        }
-    
-        .formcontato__botao:hover {
             cursor: pointer;
             background-color: var(--cor-azul-80-hover);
         }

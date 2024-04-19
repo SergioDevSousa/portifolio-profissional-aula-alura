@@ -18,6 +18,16 @@ de usuário complexa, e permite a reutilização de código existente sem copiar
 Link da documentação oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+:root{
+    --cor-de-fundo: #C5C1C0;
+    --cor-de-link: #0A1612;
+    --cor-de-texto-geral: #464646;
+    --cor-de-fundo-destaque: #F7CE3E;
+    --cor-branco: #FFFFFF;
+    --cor-azul-100: #1A2930;
+    --cor-azul-80-hover: #f8dd7a;
+    --cor-botao-bg-hover: #F7CE3E;
+}
 /* SEÇÃO MENU */
 section.menu{
     display: flex;
@@ -255,12 +265,18 @@ section header img{
     justify-content: space-between;
     align-items: center;
     margin: 25px 0;
+    width: 1136px;
+    height: 406px;
+    gap: 16px;
 }
 .experience__info{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
+    width: 348px;
+    height: 112px;
+    gap: 8px;
 }
 .experience__box:nth-child(odd){
     flex-direction: row-reverse;
@@ -279,101 +295,127 @@ section header img{
     font-weight: 700;
     font-size: 16px;
     margin: 16px 0px 0px;
-    /* line-height: 26px; */
+    line-height: 26px;
 }
 .experience__text{
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
 }
+.experience__description{
+    display: flex;
+    flex-direction: row;
+}
+/* BOTAO REPOSITORIO */
 .experience__botao--repo{
-    width: 105px;
+    width: 116px;
     height: 51px;
     padding: 16px;
     background-color: var(--cor-de-fundo);
     color: var(--cor-azul-100);
     border: 1px solid var(--cor-azul-100);
+    gap: 10px;
 }
 .experience__botao--repo:hover{
     cursor: pointer;
     background-color: var(--cor-botao-bg-hover);
 }
+/* BOTAO DEMO */
 .experience__botao--demo{
-    width: 105px;
+    width: 116px;
     height: 51px;
     padding: 16px;
     background-color: var(--cor-azul-100);
     color: var(--cor-branco);
     border: none;
+    gap: 10px;
 }
 
 .experience__botao--demo:hover{
     cursor: pointer;
     background-color: var(--cor-azul-80-hover);
 }
-/* CONTATO */
+/*CONTATO */
 
-.formcontato{
+section.formcontato{
     background-color: var(--cor-de-fundo-destaque);
 }
-.formcontato__contato{
+
+.formcontato__contato {
     display: flex;
-    justify-content: center;
-    align-content: space-around;
+    justify-content: space-around;
+    padding: 50px 150px;
+    
 }
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+
+.formcontato__text {
+    margin-left: 16px;
+    border: 2px solid var(--cor-de-link);
+    border-radius: 10px;
+    padding: 2%;
 }
-input[type="text"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+
+.formcontato__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 0;
+
 }
-textarea {
-    height: 150px;
-}
-input[type="submit"] {
-    background-color: var(--cor-de-link);
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+.formcontato__subtext {
+    font-weight: 500;
     font-size: 16px;
-}
-input[type="submit"]:hover {
-    background-color: var(--cor-botao-bg-hover);
-}
-
-.formcontato--esquerda{
-    align-items: center;
-}
-.formcontato--esquerda img{
-    box-shadow: none;
-}
-.form--google{
-    align-content: center;
-}
-.formcontato__img:hover{
-    transition: 500ms linear;
-    transform: scale(1.1);
+    line-height: 19px;
+    margin-top: 0;
 }
 
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 458px;
+    border: 2px solid var(--cor-de-link);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.formcontato__input {
+    height: 25px;
+    border: 2px solid var(--cor-de-link);
+    border-radius: 10px;
+    padding: 0.5%;
+}
+
+.formcontato__textarea {
+    height: 133px;
+    resize: none;
+    border: 2px solid var(--cor-de-link);
+    border-radius: 10px;
+    padding: 0.5%;
+}
+
+.btn-enviar {
+    width: 165px;
+    height: 51px;
+    padding: 16px;
+    background-color: var(--cor-azul-100);
+    color: var(--cor-branco);
+    border: none;
+}
+.btn-enviar:hover {
+    cursor: pointer;
+    background-color: var(--cor-azul-80-hover);
+}
 /* RODAPE */
 
-footer {
-    margin: 0;
-    padding: 20px 0; /* Adicione preenchimento se necessário */
-    background-color: var(--cor-de-link); /* Cor de fundo opcional */
-    color: #fff; /* Cor do texto opcional */
-    text-align: center; /* Centraliza o texto */
+section.footer{
+    background-color: var(--cor-de-link);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: var(--cor-botao-bg-hover);
 }
