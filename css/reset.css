@@ -1,6 +1,3 @@
-*{
-    border: 0;
-}
 body{
     box-sizing: border-box;
     background-color: var(--cor-de-fundo);
